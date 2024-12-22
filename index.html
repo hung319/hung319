@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #e0f2f7; /* Màu nền trắng pha xanh nhạt */
+            background: linear-gradient(to right, #e0f2f7, #a9d9f6);
             color: #333;
         }
         .container {
@@ -19,16 +19,21 @@
             overflow: hidden;
         }
         header {
-            background: #007bff; /* Màu xanh lam */
+            background: #00509e; /* Dark blue */
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            transition: all 0.3s ease;
         }
         header img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        header img:hover {
+            transform: scale(1.1);
         }
         h1, h2 {
             margin-top: 0;
@@ -37,45 +42,36 @@
             padding: 20px 0;
         }
         .section h2 {
-            border-bottom: 2px solid #007bff; /* Màu xanh lam */
+            border-bottom: 2px solid #00509e; /* Dark blue */
             padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        footer {
-            background: #007bff; /* Màu xanh lam */
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
         a {
-            color: #fff;
+            color: #00509e; /* Dark blue */
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         a:hover {
+            color: #ff7f50; /* Coral color */
             text-decoration: underline;
         }
-        .contact-links a{
-            color: #007bff;
-            text-decoration: none;
-        }
-        .contact-links a:hover{
-            text-decoration: underline;
-        }
-
-        /* CSS cho phần nhạc nền */
         #audio-player {
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            border: 3px solid #007bff; /* Viền xanh lam */
+            border: 3px solid #00509e; /* Dark blue */
             padding: 10px;
-            border-radius: 5px; /* Bo góc viền */
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
-        #audio-player audio{
-          width: 100%;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -95,7 +91,7 @@
 
         <section class="section about">
             <h2>Giới thiệu</h2>
-            <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp cấp 3 tại trường Chu Văn An và hiện đang theo đuổi con đường trở thành lập trình viên tại trường Cao đẳng Bưu Điện (CĐBP).</p>
+            <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp[...]</p>
         </section>
 
         <section class="section education">
