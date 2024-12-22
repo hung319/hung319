@@ -93,31 +93,14 @@
         #audio-player {
             margin-top: 20px;
             text-align: center;
-            padding: 10px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .plyr--full-ui {
+        .plyr {
             width: 100%;
             max-width: 500px;
             margin: auto;
-            background: transparent;
-            border: none;
-            border-radius: 8px;
-        }
-
-        .plyr__controls {
-            background: #007bff;
-            border-radius: 8px;
-            padding: 5px;
-        }
-
-        .plyr__progress {
-            background: #0056b3;
-            height: 6px;
-            border-radius: 3px;
+            border-radius: 10px;
+            background: #f8f9fa;
         }
 
         ul {
@@ -202,8 +185,8 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script>
         const player = new Plyr('#player', {
-            controls: ['play', 'progress', 'current-time'],
-            settings: ['quality']
+            controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+            settings: ['quality', 'speed']
         });
     </script>
 </body>
