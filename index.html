@@ -69,14 +69,12 @@
 
         /* CSS cho phần nhạc nền */
         #audio-player {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            padding: 10px;
-            width: 50%;
+            text-align: center; /* Căn giữa */
+            width: 100%;
+            padding: 10px 0; /* Thêm padding trên dưới */
         }
         #audio-player audio{
-            width: 100%;
+            width: 50%;
             background-color: #0dffea; /* Màu xanh cyberpunk */
         }
         .section-line {
@@ -93,14 +91,13 @@
             <img src="six.jpg" alt="six.jpg" />
             <h1>Hoàng Phi Hùng (SIX)</h1>
             <p>"Học code tuy khó, nhưng chưa chắc đã giàu"</p>
-            <div id="audio-player">
-                <audio controls>
-                    <source src="music.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
         </header>
-
+        <div id="audio-player">
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
         <section class="section about">
             <h2>Giới thiệu</h2>
             <hr class="section-line">
