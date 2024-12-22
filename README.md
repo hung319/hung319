@@ -12,7 +12,7 @@ Mình là một người đam mê công nghệ và yêu thích việc học hỏ
 **🎓 Học vấn:**
 
 * Tốt nghiệp cấp 3 tại trường THPT Chu Văn An
-* Đang theo học IT tại Cao đẳng Biên phòng
+* Đang theo học IT tại Cao đẳng Bình Phước
 
 **🎯 Thành tựu:**
 
