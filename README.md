@@ -26,9 +26,9 @@ Mình là một người đam mê công nghệ và yêu thích việc học hỏ
 
 **✨ Triết lý:**
 
-> "Học code tuy khó, nhưng chưa chắc đã giàu" - Hoàng Phi Hùng
+> "Học code tuy khó, nhưng chưa chắc đã giàu"
 
-**🚀 Kỹ năng:**
+**🚀 Kỹ năng cơ bản:**
 
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
