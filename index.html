@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e0f2f7; /* Màu nền trắng pha xanh nhạt */
             color: #333;
         }
         .container {
@@ -19,7 +19,7 @@
             overflow: hidden;
         }
         header {
-            background: #333;
+            background: #007bff; /* Màu xanh lam */
             color: #fff;
             padding: 1rem 0;
             text-align: center;
@@ -37,7 +37,7 @@
             padding: 20px 0;
         }
         .section h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #007bff; /* Màu xanh lam */
             padding-bottom: 10px;
         }
         ul {
@@ -45,7 +45,7 @@
             padding: 0;
         }
         footer {
-            background: #333;
+            background: #007bff; /* Màu xanh lam */
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -58,16 +58,24 @@
             text-decoration: underline;
         }
         .contact-links a{
-          color: #007bff;
+            color: #007bff;
+            text-decoration: none;
         }
         .contact-links a:hover{
-          text-decoration: underline;
+            text-decoration: underline;
         }
-        /* Thêm CSS cho phần nhạc nền */
+
+        /* CSS cho phần nhạc nền */
         #audio-player {
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            border: 3px solid #007bff; /* Viền xanh lam */
+            padding: 10px;
+            border-radius: 5px; /* Bo góc viền */
+        }
+        #audio-player audio{
+          width: 100%;
         }
     </style>
 </head>
@@ -77,6 +85,12 @@
             <img src="six.jpg" alt="six.jpg" />
             <h1>Hoàng Phi Hùng (SIX)</h1>
             <p>"Học code tuy khó, nhưng chưa chắc đã giàu"</p>
+            <div id="audio-player">
+                <audio controls>
+                    <source src="music.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </header>
 
         <section class="section about">
@@ -116,16 +130,6 @@
                 <li>Github: <a href="https://github.com/hung319" target="_blank">https://github.com/hung319</a></li>
             </ul>
         </section>
-
-        <section class="section">
-          <h2>Âm nhạc yêu thích</h2>
-          <div id="audio-player">
-              <audio controls>
-                  <source src="music.mp3" type="audio/mpeg">
-                  Your browser does not support the audio element.
-              </audio>
-          </div>
-      </section>
     </div>
 
     <footer>
