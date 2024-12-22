@@ -4,73 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoàng Phi Hùng (SIX)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* CSS chính */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #e0f2f7, #a9d9f6);
+            background: linear-gradient(135deg, #007bff, #e0f2f7);
             color: #333;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+
         header {
-            background: #00509e; /* Dark blue */
+            background: linear-gradient(90deg, #007bff, #003d99);
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
-            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         header img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
-            transition: transform 0.3s ease-in-out;
+            border: 4px solid #fff;
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
         }
+
         header img:hover {
             transform: scale(1.1);
         }
+
         h1, h2 {
             margin-top: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .section {
-            padding: 20px 0;
+            padding: 40px 0;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
         .section h2 {
-            border-bottom: 2px solid #00509e; /* Dark blue */
+            border-bottom: 3px solid #007bff;
             padding-bottom: 10px;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
         }
+
         a {
-            color: #00509e; /* Dark blue */
+            color: #007bff;
+            font-weight: bold;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
+
         a:hover {
-            color: #ff7f50; /* Coral color */
             text-decoration: underline;
+            color: #0056b3;
         }
+
+        footer {
+            background: #003d99;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
         #audio-player {
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            border: 3px solid #00509e; /* Dark blue */
+            border: 3px solid #fff;
             padding: 10px;
-            border-radius: 10px; /* More rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
             }
-            to {
-                opacity: 1;
+
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section {
+                padding: 20px;
             }
         }
     </style>
@@ -91,7 +125,7 @@
 
         <section class="section about">
             <h2>Giới thiệu</h2>
-            <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp[...]</p>
+            <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp cấp 3 tại trường Chu Văn An và hiện đang theo đuổi con đường trở thành lập trình viên tại trường Cao đẳng Bưu Điện (CĐBP).</p>
         </section>
 
         <section class="section education">
