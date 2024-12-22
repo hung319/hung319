@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoàng Phi Hùng (SIX)</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <style>
-        /* CSS chính */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #007bff, #e0f2f7);
+            background-color: #e0f2f7;
             color: #333;
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
+            overflow: hidden;
         }
 
         header {
-            background: linear-gradient(90deg, #007bff, #003d99);
+            background: #007bff;
             color: #fff;
-            padding: 2rem 0;
+            padding: 1rem 0;
             text-align: center;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
         }
 
         header img {
@@ -38,66 +34,19 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border: 4px solid #fff;
-            margin-bottom: 1rem;
-            transition: transform 0.3s;
-        }
-
-        header img:hover {
-            transform: scale(1.1);
         }
 
         h1, h2 {
             margin-top: 0;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .section {
             padding: 20px 0;
-            margin: 20px 0;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .section h2 {
-            border-bottom: 3px solid #007bff;
+            border-bottom: 2px solid #007bff;
             padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        footer {
-            background: #003d99;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        #audio-player {
-            margin-top: 20px;
-            border: none;
-            padding: 0;
-        }
-
-        #audio-player audio {
-            width: 100%;
-            display: block;
-            border: none;
         }
 
         ul {
@@ -105,19 +54,57 @@
             padding: 0;
         }
 
-        .contact-links li {
-            margin-bottom: 10px;
+        footer {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
         }
 
-        @media (max-width: 768px) {
-            header img {
-                width: 120px;
-                height: 120px;
-            }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-            .section {
-                padding: 15px;
-            }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        #audio-player {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .plyr--full-ui {
+            border: none;
+            background: transparent;
+        }
+
+        .plyr__controls {
+            background: #007bff;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .plyr__controls button {
+            color: #fff;
+        }
+
+        .plyr__progress {
+            background: #0056b3;
         }
     </style>
 </head>
@@ -128,7 +115,7 @@
             <h1>Hoàng Phi Hùng (SIX)</h1>
             <p>"Học code tuy khó, nhưng chưa chắc đã giàu"</p>
             <div id="audio-player">
-                <audio controls>
+                <audio id="player" controls>
                     <source src="music.mp3" type="audio/mpeg">
                     Trình duyệt của bạn không hỗ trợ phần tử âm thanh.
                 </audio>
@@ -177,5 +164,14 @@
     <footer>
         <p>&copy; 2024 Hoàng Phi Hùng (SIX)</p>
     </footer>
+
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const player = new Plyr('#player', {
+            controls: ['play', 'progress', 'current-time', 'duration'],
+            settings: [],
+        });
+    </script>
 </body>
 </html>
