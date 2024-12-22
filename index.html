@@ -23,6 +23,7 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            width: 100%; /* Full chiều ngang */
         }
         header img {
             border-radius: 50%;
@@ -39,6 +40,7 @@
         .section h2 {
             border-bottom: 2px solid #007bff; /* Màu xanh lam */
             padding-bottom: 10px;
+            width: 100%; /* Full chiều ngang */
         }
         ul {
             list-style: none;
@@ -70,13 +72,19 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            border: 3px solid #007bff; /* Viền xanh lam */
             padding: 10px;
-            border-radius: 5px; /* Bo góc viền */
+            width: 50%;
         }
         #audio-player audio{
-          width: 100%;
+            width: 100%;
+            background-color: #0dffea; /* Màu xanh cyberpunk */
         }
+        .section-line {
+          border: none;
+          border-top: 2px solid #007bff; /* Màu xanh lam */
+          width: 100%;
+          margin: 5px 0; /* Khoảng cách với chữ */
+}
     </style>
 </head>
 <body>
@@ -95,11 +103,13 @@
 
         <section class="section about">
             <h2>Giới thiệu</h2>
+            <hr class="section-line">
             <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp cấp 3 tại trường Chu Văn An và hiện đang theo đuổi con đường trở thành lập trình viên tại trường Cao đẳng Bưu Điện (CĐBP).</p>
         </section>
 
         <section class="section education">
             <h2>Học vấn</h2>
+            <hr class="section-line">
             <ul>
                 <li>THPT Chu Văn An - Đã tốt nghiệp</li>
                 <li>Cao đẳng Bưu Điện (CĐBP) - Chuyên ngành IT - Đang theo học</li>
@@ -108,6 +118,7 @@
 
         <section class="section hobbies">
             <h2>Sở thích</h2>
+            <hr class="section-line">
             <ul>
                 <li>Code: Đam mê với các ngôn ngữ lập trình và phát triển phần mềm.</li>
                 <li>Anime</li>
@@ -117,6 +128,7 @@
 
         <section class="section achievements">
             <h2>Thành tích</h2>
+            <hr class="section-line">
             <ul>
                 <li>Tốt nghiệp cấp 3 tại trường Chu Văn An</li>
             </ul>
@@ -124,6 +136,7 @@
 
         <section class="section contact">
             <h2>Liên hệ</h2>
+            <hr class="section-line">
             <ul class="contact-links">
                 <li>Email: <a href="mailto:hung319@h4rs.io.vn">hung319@h4rs.io.vn</a></li>
                 <li>Facebook: <a href="https://www.facebook.com/hung319.me?mibextid=ZbWKwL" target="_blank">https://www.facebook.com/hung319.me?mibextid=ZbWKwL</a></li>
