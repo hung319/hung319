@@ -3,189 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoàng Phi Hùng (SIX)</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <title>Hoàng Phi Hùng (SIX) - Profile Code Theme</title>
+    <!-- Google Fonts: Sử dụng Inter cho text chung và Fira Code cho code -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* CSS chính */
+        /* Tùy chỉnh Tailwind để sử dụng font Inter và Fira Code */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #007bff, #e0f2f7);
-            color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif; /* Tiêu đề vẫn dùng Inter đậm */
+            font-weight: 700;
+        }
+        p, li {
+            font-weight: 300; /* Nội dung text nhẹ nhàng hơn để dễ đọc trên nền tối */
+        }
+        code, pre {
+            font-family: 'Fira Code', monospace; /* Sử dụng font Fira Code cho các đoạn code/pre */
+            font-weight: 400;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        header {
-            background: linear-gradient(90deg, #007bff, #003d99);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-
-        header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 4px solid #fff;
-            margin-bottom: 1rem;
-            transition: transform 0.3s;
-        }
-
-        header img:hover {
-            transform: scale(1.1);
-        }
-
-        h1, h2 {
-            margin-top: 0;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .section {
-            padding: 20px 0;
-            margin: 20px 0;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        footer {
-            background: #003d99;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        #audio-player {
-            margin-top: 20px;
-            text-align: center;
-        }
-
+        /* Plyr CSS: Điều chỉnh màu sắc cho phù hợp với theme tối */
         .plyr {
-            width: 75%;
-            max-width: 500px;
-            margin: auto;
-            border-radius: 10px;
-            background-color: #add2f7 !important;
+            --plyr-color-main: #63b3ed; /* Màu xanh sáng làm điểm nhấn */
+            --plyr-control-spacing: 10px;
+            border-radius: 0.5rem;
+            background-color: #2d3748 !important; /* Nền tối hơn */
+            color: #e2e8f0; /* Chữ sáng hơn */
+        }
+        #audio-player .plyr {
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* Thêm hiệu ứng cho các section giống như các cửa sổ/khối code */
+        .section {
+            background-color: #2d3748; /* Nền tối */
+            border: 1px solid #4a5568; /* Viền nhạt */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Bóng đổ đậm hơn */
+            border-radius: 0.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
 
-        .contact-links li {
-            margin-bottom: 10px;
+        /* Hiệu ứng thanh ngang giả terminal trên header */
+        .header-terminal-bar {
+            background-color: #1a202c;
+            height: 20px;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            gap: 6px;
         }
-
-        @media (max-width: 768px) {
-            header img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .section {
-                padding: 15px;
-            }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
         }
+        .dot-red { background-color: #ef4444; } /* Red */
+        .dot-yellow { background-color: #f59e0b; } /* Yellow */
+        .dot-green { background-color: #22c55e; } /* Green */
     </style>
+    <!-- Plyr CSS: Tích hợp Plyr để có trình phát âm thanh chuyên nghiệp -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <img src="six.webp" alt="six.webp" />
-            <h1>Hoàng Phi Hùng (SIX)</h1>
-            <p>"Học code tuy khó, nhưng chưa chắc đã giàu"</p>
-            <div id="audio-player">
-                <audio id="player" controls>
-                    <source src="music.mp3" type="audio/mpeg">
-                    Trình duyệt của bạn không hỗ trợ phần tử âm thanh.
-                </audio>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-200 antialiased min-h-screen flex flex-col p-6 md:p-10">
+    <div class="container max-w-3xl mx-auto flex-grow">
+        <!-- Phần Header: Thông tin cá nhân và ảnh đại diện, giả lập cửa sổ terminal -->
+        <header class="bg-gray-700 p-8 pt-12 rounded-xl shadow-2xl mb-8 relative">
+            <div class="header-terminal-bar">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="text-center relative z-10">
+                <!-- Ảnh đại diện: Bo tròn, có viền phát sáng nhẹ nhàng -->
+                <img src="https://placehold.co/120x120/1f2937/63b3ed?text=SIX" alt="Hoàng Phi Hùng (SIX)" class="rounded-full w-30 h-30 object-cover border-2 border-blue-400 mx-auto mb-4 shadow-lg transition-transform duration-300 hover:scale-105"/>
+                <h1 class="text-3xl font-bold text-blue-300 mb-2 tracking-tight">Hoàng Phi Hùng (SIX)</h1>
+                <p class="text-lg italic text-gray-400 opacity-90">"Học code tuy khó, nhưng chưa chắc đã giàu" 😅</p>
+                <!-- Trình phát âm thanh Plyr.js -->
+                <div id="audio-player" class="mt-6">
+                    <audio id="player" controls preload="metadata">
+                        <!-- Lưu ý: Cần thay thế 'music.mp3' bằng một URL công khai hoặc đảm bảo file này có thể truy cập được -->
+                        <source src="music.mp3" type="audio/mpeg">
+                        Trình duyệt của Yuu Onii-chan không hỗ trợ phần tử âm thanh này.
+                    </audio>
+                </div>
             </div>
         </header>
 
-        <section class="section about">
-            <h2>Giới thiệu</h2>
-            <p>Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp cấp 3 tại trường Chu Văn An và hiện đang theo đuổi con đường trở thành lập trình viên tại trường Cao đẳng Bình Phước (CĐBP).</p>
+        <!-- Phần Giới thiệu: Thông tin về bản thân -->
+        <section class="section p-6 rounded-md mb-6">
+            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Giới thiệu 📚</h2>
+            <p class="text-gray-300">Xin chào, tôi là Hoàng Phi Hùng, thường được biết đến với biệt danh SIX. Tôi là một sinh viên IT đam mê code, anime và phim ảnh. Tôi vừa tốt nghiệp cấp 3 tại trường Chu Văn An và hiện đang theo đuổi con đường trở thành lập trình viên tại trường Cao đẳng Bình Phước (CĐBP).</p>
         </section>
 
-        <section class="section education">
-            <h2>Học vấn</h2>
-            <ul>
+        <!-- Phần Học vấn: Thông tin về quá trình học tập -->
+        <section class="section p-6 rounded-md mb-6">
+            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Học vấn 🎓</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
                 <li>THPT Chu Văn An - Đã tốt nghiệp</li>
                 <li>Cao đẳng Bình Phước (CĐBP) - Chuyên ngành IT - Đang theo học</li>
             </ul>
         </section>
 
-        <section class="section hobbies">
-            <h2>Sở thích</h2>
-            <ul>
-                <li>Code-Anime-Phim</li>
+        <!-- Phần Sở thích: Các hoạt động yêu thích -->
+        <section class="section p-6 rounded-md mb-6">
+            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Sở thích ❤️‍🔥</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
+                <li>Code</li>
+                <li>Anime</li>
+                <li>Phim ảnh</li>
             </ul>
         </section>
 
-        <section class="section achievements">
-            <h2>Thành tích</h2>
-            <ul>
+        <!-- Phần Thành tích: Các cột mốc đạt được -->
+        <section class="section p-6 rounded-md mb-6">
+            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Thành tích 🏆</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
                 <li>Đã tốt nghiệp cấp 3 tại trường THPT Chu Văn An</li>
                 <li>Hoàn thành vài project cá nhân nhỏ nhỏ</li>
             </ul>
         </section>
 
-        <section class="section contact">
-            <h2>Liên hệ</h2>
-            <ul class="contact-links">
-                <li>Email: <a href="mailto:hung319@h4rs.io.vn">click</a></li>
-                <li>Facebook: <a href="https://www.facebook.com/hung319.me" target="_blank">click</a></li>
-                <li>Github: <a href="https://github.com/hung319" target="_blank">click</a></li>
+        <!-- Phần Liên hệ: Các cách thức liên lạc -->
+        <section class="section p-6 rounded-md mb-6">
+            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Liên hệ 📞</h2>
+            <ul class="contact-links text-gray-300 space-y-2 pl-4">
+                <li>Email: <a href="mailto:hung319@h4rs.io.vn" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
+                <li>Facebook: <a href="https://www.facebook.com/hung319.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
+                <li>Github: <a href="https://github.com/hung319" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
             </ul>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Hoàng Phi Hùng (SIX)</p>
+    <!-- Phần Footer: Bản quyền -->
+    <footer class="bg-gray-800 text-gray-400 p-4 text-center rounded-md shadow-inner mt-8 border-t border-gray-700">
+        <p>&copy; 2024 Hoàng Phi Hùng (SIX). Made with ❤️ by Mahiro.</p>
     </footer>
 
-    <!-- Plyr.js -->
+    <!-- Plyr.js: Khởi tạo trình phát âm thanh -->
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script>
-        const player = new Plyr('#player', {
-            controls: ['play', 'progress', 'current-time'],
-            settings: ['quality', 'speed']
+        document.addEventListener('DOMContentLoaded', () => {
+            // Khởi tạo Plyr.js
+            const player = new Plyr('#player', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+                settings: ['quality', 'speed'],
+                speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
+                displayDuration: true,
+                keyboard: { focused: true, global: true },
+                tooltips: { controls: true, seek: true },
+                iconUrl: 'https://cdn.plyr.io/3.7.8/plyr.svg'
+            });
         });
     </script>
 </body>
