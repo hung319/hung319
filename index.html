@@ -79,6 +79,24 @@
         .dot-red { background-color: #ef4444; } /* Red */
         .dot-yellow { background-color: #f59e0b; } /* Yellow */
         .dot-green { background-color: #22c55e; } /* Green */
+
+        /* Kiểu dáng cho các nút liên hệ (chỉ icon) */
+        .contact-btn {
+            background-color: #1f2937; /* Nền tối hơn chút so với section */
+            color: #63b3ed; /* Màu xanh sáng làm điểm nhấn cho icon */
+            padding: 0.75rem; /* Padding đồng đều cho icon */
+            border-radius: 0.5rem;
+            display: inline-flex; /* Để icon căn giữa */
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .contact-btn:hover {
+            background-color: #374151; /* Tối hơn khi hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
     </style>
     <!-- Plyr CSS: Tích hợp Plyr để có trình phát âm thanh chuyên nghiệp -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
@@ -104,6 +122,22 @@
                         <source src="music.mp3" type="audio/mpeg">
                         Trình duyệt của Yuu Onii-chan không hỗ trợ phần tử âm thanh này.
                     </audio>
+                </div>
+
+                <!-- Các nút liên hệ tích hợp trong header (chỉ icon) -->
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="mailto:hung319@h4rs.io.vn" class="contact-btn" aria-label="Email">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.893 3.947c.228.114.498.114.726 0L21 8M3 8v8a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l.454-.227A9.998 9.998 0 0012 17a9.998 9.998 0 008.546-9.227L21 8"></path></svg>
+                    </a>
+                    <a href="https://www.facebook.com/hung319.me" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4V6.595c0-.464.084-.737.746-1.074.664-.337 1.547-.421 2.308-.421h1.946V.75a.987.987 0 00-.729-.687C17.653 0 16.516.035 15.352.035c-2.39 0-3.528 1.157-3.528 3.593V8H9z"></path></svg>
+                    </a>
+                    <a href="https://github.com/hung319" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Github">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.167 6.839 9.5.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.704-2.782.601-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.619.069-.607.069-.607 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.83.091-.645.356-1.089.648-1.334-2.22-.253-4.555-1.113-4.555-4.93 0-1.087.389-1.979 1.029-2.674-.103-.253-.446-1.268.098-2.646 0 0 .84-.268 2.75 1.025A9.458 9.458 0 0112 5.09c.85.004 1.703.116 2.504.337 1.909-1.293 2.747-1.025 2.747-1.025.546 1.378.202 2.393.099 2.646.64.695 1.029 1.587 1.029 2.674 0 3.829-2.339 4.673-4.566 4.92-.369.319-.685.736-.685 1.48V21.5c0 .265.18.57.688.484C20.137 20.17 23 16.42 23 12.017 23 6.484 18.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="https://t.me/hung319" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Telegram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.307 7.502l-2.478 1.996 1.464 4.54a.75.75 0 01-1.353.606l-2.148-1.579-1.465 1.465a.75.75 0 01-1.06-.002L7.33 13.91l-1.056-3.864c-.118-.432.224-.863.665-.794l9.315 3.018c.451.146.45-.487.001-.634L12.59 7.747c-.201-.065-.436.084-.37.285l.89 2.766a.75.75 0 01-1.373.444L9.04 8.795c-.17-.09-.37-.024-.49.123L5.617 11.23c-.15.15-.36.086-.48.006l.332-1.354a.75.75 0 01.442-.644l.872-.258c.42-.124.59-.62.29-.982L9.07 7.037c.307-.375.877-.282 1.135.215l2.42 4.675c.18.347.67.243.83-.153l1.855-4.498a.75.75 0 01.76-.304z"/></svg>
+                    </a>
                 </div>
             </div>
         </header>
@@ -141,16 +175,6 @@
                 <li>Hoàn thành vài project cá nhân nhỏ nhỏ</li>
             </ul>
         </section>
-
-        <!-- Phần Liên hệ: Các cách thức liên lạc -->
-        <section class="section p-6 rounded-md mb-6">
-            <h2 class="text-xl font-semibold text-blue-400 border-b-2 border-blue-600 pb-2 mb-4">Liên hệ 📞</h2>
-            <ul class="contact-links text-gray-300 space-y-2 pl-4">
-                <li>Email: <a href="mailto:hung319@h4rs.io.vn" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
-                <li>Facebook: <a href="https://www.facebook.com/hung319.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
-                <li>Github: <a href="https://github.com/hung319" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-semibold hover:underline hover:text-blue-200 transition-colors duration-200">click</a></li>
-            </ul>
-        </section>
     </div>
 
     <!-- Phần Footer: Bản quyền -->
@@ -164,7 +188,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Khởi tạo Plyr.js
             const player = new Plyr('#player', {
-                controls: ['play', 'progress', 'current-time'],
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
                 settings: ['quality', 'speed'],
                 speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
                 displayDuration: true,
